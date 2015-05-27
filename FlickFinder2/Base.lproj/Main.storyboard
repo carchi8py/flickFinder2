@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="FlickFinder2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Flick Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZK-SL-bDb">
+                                <rect key="frame" x="232" y="20" width="136" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="zHO-ic-Zya"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="0.57866467929999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8a-bS-t9H" userLabel="Search Container">
+                                <rect key="frame" x="16" y="345" width="568" height="235"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.75192742599999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-l1-4TQ" userLabel="Photo View Container">
+                                <rect key="frame" x="16" y="61" width="568" height="250"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.066666666669999999" green="0.59999999999999998" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E8a-bS-t9H" firstAttribute="top" secondItem="5Ls-l1-4TQ" secondAttribute="bottom" constant="34" id="5Nk-lh-unh"/>
+                            <constraint firstItem="iZK-SL-bDb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="ABR-ji-kvH"/>
+                            <constraint firstItem="5Ls-l1-4TQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Hmh-jO-3Cj"/>
+                            <constraint firstItem="iZK-SL-bDb" firstAttribute="centerX" secondItem="5Ls-l1-4TQ" secondAttribute="centerX" id="Qy9-E5-PPS"/>
+                            <constraint firstItem="5Ls-l1-4TQ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="UE4-g1-Mo1"/>
+                            <constraint firstItem="E8a-bS-t9H" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="bpg-Xf-QNe"/>
+                            <constraint firstItem="5Ls-l1-4TQ" firstAttribute="top" secondItem="iZK-SL-bDb" secondAttribute="bottom" constant="8" id="dax-9p-Xjd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="E8a-bS-t9H" secondAttribute="bottom" constant="20" id="hOU-lk-xB2"/>
+                            <constraint firstItem="E8a-bS-t9H" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="j0d-Y6-qmM"/>
+                            <constraint firstItem="E8a-bS-t9H" firstAttribute="height" secondItem="5Ls-l1-4TQ" secondAttribute="height" id="ptv-dR-iLV"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
