@@ -32,8 +32,26 @@
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-l1-4TQ" userLabel="Photo View Container">
                                 <rect key="frame" x="16" y="61" width="568" height="250"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Search and Find a Flick!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGp-0i-bjm">
+                                        <rect key="frame" x="179" y="113" width="210" height="24"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.57866467929999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Int" translatesAutoresizingMaskIntoConstraints="NO" id="d0G-rn-qp0">
+                                        <rect key="frame" x="-6" y="-6" width="580" height="262"/>
+                                    </imageView>
+                                </subviews>
                                 <accessibility key="accessibilityConfiguration" label=""/>
+                                <constraints>
+                                    <constraint firstItem="d0G-rn-qp0" firstAttribute="top" secondItem="5Ls-l1-4TQ" secondAttribute="top" constant="6" id="5Cc-N0-kZU"/>
+                                    <constraint firstAttribute="centerY" secondItem="QGp-0i-bjm" secondAttribute="centerY" id="Uqi-CZ-wrr"/>
+                                    <constraint firstAttribute="bottom" secondItem="d0G-rn-qp0" secondAttribute="bottom" constant="6" id="lL3-xy-iCB"/>
+                                    <constraint firstItem="d0G-rn-qp0" firstAttribute="leading" secondItem="5Ls-l1-4TQ" secondAttribute="leading" constant="6" id="m5P-hv-YG2"/>
+                                    <constraint firstAttribute="centerX" secondItem="QGp-0i-bjm" secondAttribute="centerX" id="oGf-rJ-wcB"/>
+                                    <constraint firstAttribute="trailing" secondItem="d0G-rn-qp0" secondAttribute="trailing" id="pYG-aK-aTx"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666669999999" green="0.59999999999999998" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,6 +66,7 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="E8a-bS-t9H" secondAttribute="bottom" constant="20" id="hOU-lk-xB2"/>
                             <constraint firstItem="E8a-bS-t9H" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="j0d-Y6-qmM"/>
                             <constraint firstItem="E8a-bS-t9H" firstAttribute="height" secondItem="5Ls-l1-4TQ" secondAttribute="height" id="ptv-dR-iLV"/>
+                            <constraint firstItem="5Ls-l1-4TQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="41" id="ugS-ZD-6ad"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -55,4 +74,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Int" width="340" height="239"/>
+    </resources>
 </document>
